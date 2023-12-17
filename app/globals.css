@@ -2,26 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer components {
+  .link-hover {
+    @apply after:translate-y-1
+     after:opacity-0
+      after:transition 
+      after:duration-300 
+      after:ease-in-out
+      hover:after:translate-y-0
+      hover:after:opacity-100;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  .hero-heading {
+    @apply font-lexend  text-5xl  font-extrabold lg:text-6xl;
+  }
+  .hero-subHeading {
+    @apply font-lexend  text-2xl font-bold md:text-2xl;
+  }
+  .h1 {
+    @apply font-lexend text-4xl font-extrabold md:text-5xl;
+  }
+  .h2 {
+    @apply font-lexend text-[2.488rem] font-bold;
+  }
+  .h3 {
+    @apply font-lexend text-[2.074rem] font-medium md:font-semibold;
+  }
+
+  .h6 {
+    @apply font-lexend  text-sm font-medium md:font-semibold;
+  }
+
+  .body-text1 {
+    @apply font-inter text-sm md:text-base;
+  }
+
+  .iconsHover {
+    @apply transition-all duration-500 hover:scale-125;
+  }
+
+  .primary-gradient {
+    @apply bg-primaryToGradient bg-gradient-to-tr from-primaryFromGradient;
+  }
+  .secondary-gradient {
+    @apply bg-secondaryToGradient bg-gradient-to-tr from-secondaryfromGradient;
+  }
+
+  .call-to-action {
+    @apply rounded-md text-sm font-bold;
+  }
+  .shadowEffect {
+    @apply border-l-2 border-t-2 border-blue-600 shadow-[5px_5px_rgba(0,_60,_250,_0.3),_10px_10px_rgba(0,_60,_250,_0.2),_15px_15px_rgba(0,_60,_250,_0.1),_20px_20px_rgba(0,_60,_250,_0.05)];
   }
 }
+/* 
+  layoutcheck
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+*/
+/* #hero-extra > * {
+  border: 1px dotted;
 }
+#hero-extra * {
+  border: 1px solid;
+}
+ */
