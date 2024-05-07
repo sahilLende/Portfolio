@@ -32,7 +32,7 @@ const projects = [
   {
     title: "ReactJs Cloth Shop", // Project Title
     description:
-      "A SPA made using ReactJS.It leverages Firebase for secure and efficient data management and user authentication. The application supports features like shopping cart management, and secure checkout processes",
+      "A SPA made using ReactJS. It leverages Firebase for data management and user authentication and supports features like shopping cart, and secure checkout processes",
     tags: ["ReactJs", "Firebase"], // Array of project tags
     hrefs: {
       live: "https://sahillende.vercel.app", // Link to project demo
